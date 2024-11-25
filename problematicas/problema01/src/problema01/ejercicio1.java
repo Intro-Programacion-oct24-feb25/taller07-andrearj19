@@ -58,7 +58,5 @@ public class ejercicio1 {
 
 
         // presentación de cadena final
-        System.out.printf("%s\n", cadenaReporte);
-            
-          
+        System.out.printf("%s\n", cadenaReporte);      }
 }
