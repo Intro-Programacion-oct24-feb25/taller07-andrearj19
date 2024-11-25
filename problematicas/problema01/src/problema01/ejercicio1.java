@@ -3,29 +3,62 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package problema01;
-
-import java.util.Locale;
-import java.util.Scanner;
 /**
  *
  * @author Edgar Arias
  */
+import java.util.Locale;
+import java.util.Scanner;
+
 public class ejercicio1 {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
+        // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        boolean continuar = true;
         String cadenaReporte = "";
         String nombreJugador;
         String posicionCampo;
-        String jugadores;
+
         int edad;
         double estatura;
+        boolean bandera = true;
         String salir;
-        
-        while (continuar) {
-            System.out.print("Ingrese el nombre del jugador: ");
-            String nombreJugador = Scanner.nextLine();
+        // variable acumuladoras
+        int sumaEdades = 0;
+
+        // contador para saber el número de iteraciones
+        int contadorIteraciones = 0;
+        // variables para promedio
+        double promedioEdad;
+        double promedioEstatura;
+        cadenaReporte = String.format("%s%s\n", cadenaReporte,
+                "Listado de Jugadores");
+
+        while(bandera){
+            System.out.println("Ingrese el nombre del Jugador: ");
+            nombreJugador = entrada.nextLine();
+
+            // agrego una iteración
+            contadorIteraciones = contadorIteraciones + 1; // primera(0+1=1)
+
+            // Ejmplo 1. Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+            cadenaReporte = String.format("%s%d.) %s\n",
+                    cadenaReporte,
+                    contadorIteraciones,
+                    nombreJugador);
+                  
+
+            // entrada.nextLine(); //
+            System.out.println("Desea salir del ciclo; digite: si");
+            salir = entrada.nextLine();
+            if(salir.equals("si")){
+                bandera = false;
+            }
+        }
+
+
+        // presentación de cadena final
+        System.out.printf("%s\n", cadenaReporte);
             
           
 }
