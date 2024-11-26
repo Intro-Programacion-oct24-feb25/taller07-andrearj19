@@ -18,6 +18,7 @@ public class ejercicio1 {
         String cadenaReporte = "";
         String nombreJugador;
         String posicionCampo;
+        String jugadores;
 
         int edad;
         double estatura;
@@ -37,7 +38,16 @@ public class ejercicio1 {
         while(bandera){
             System.out.println("Ingrese el nombre del Jugador: ");
             nombreJugador = entrada.nextLine();
-
+            System.out.print("Ingrese la posición en el campo de juego: ");
+            posicionCampo = entrada.nextLine();
+            System.out.print("Ingrese la edad del jugador: ");
+            edad = entrada.nextInt();
+            System.out.print("Ingrese la estatura del jugador (en metros): ");
+            estatura = entrada.nextDouble();
+            
+            
+            
+            
             // agrego una iteración
             contadorIteraciones = contadorIteraciones + 1; // primera(0+1=1)
 
@@ -53,7 +63,9 @@ public class ejercicio1 {
             salir = entrada.nextLine();
             if(salir.equals("si")){
                 bandera = false;
+                 
             }
+               
         }
 
 
